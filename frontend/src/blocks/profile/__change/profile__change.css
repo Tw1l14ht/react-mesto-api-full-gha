@@ -1,0 +1,18 @@
+.profile__change{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-image: url(../../../images/Vector3.svg);
+    background-size: cover;
+    border-radius: 50%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+.profile__change:hover {
+    background-size: 26px 26px;
+    opacity: 0.8;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+}

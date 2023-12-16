@@ -1,0 +1,18 @@
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 323px);
+    margin: 60px auto;
+  }
+
+@media screen and (max-width:917px) {
+    .auth__form{
+        min-height: calc(100vh - 257px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .auth__form{
+        min-height: calc(100vh - 257px);
+    }
+}

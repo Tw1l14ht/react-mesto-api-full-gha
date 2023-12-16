@@ -1,0 +1,6 @@
+@media screen and (min-width:768px) {
+    .popup__close_place_card{
+        top: -40px;
+        right: -40px;
+    }
+}
