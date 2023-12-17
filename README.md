@@ -8,9 +8,8 @@
 Адрес репозитория: https://github.com/Tw1l14ht/react-mesto-api-full-gha.git
 
 ## Ссылки на проект
+Frontend https://twilight1.nomoredomainsmonster.ru
 
-# IP-адрес 158.160.138.65
+Backend https://api.twilight1.nomoredomainsmonster.ru
 
-# Frontend https://twilight1.nomoredomainsmonster.ru
-
-# Backend https://api.twilight1.nomoredomainsmonster.ru
+IP 158.160.138.65
