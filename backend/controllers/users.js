@@ -6,6 +6,8 @@ const BadRequestError = require('../stat_code_errors/BadRequestError');
 const ConflictError = require('../stat_code_errors/ConflictError');
 const AuthError = require('../stat_code_errors/AuthError');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 module.exports.getUsers = (req, res, next) => {
   console.log(req);
   userSchema.find({})
@@ -99,7 +101,7 @@ module.exports.login = (req, res, next) => {
       if (!user) {
         throw new AuthError('Пользователь не найден');
       }
-      const token = jwt.sign({ _id: user._id }, 'some-secret-key', {
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'some-secret-key', {
         expiresIn: '7d',
       });
       res.send({ token });
