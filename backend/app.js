@@ -2,8 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const bodyParser = require('body-parser');
-const router = require('./routes');
 const cors = require('cors');
+const router = require('./routes');
 const corsErrors = require('./middlewares/corsErrors')
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
