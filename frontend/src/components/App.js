@@ -62,7 +62,7 @@ function App() {
       .catch((err) => {
           console.log(err);
       });
-  }, []);
+  }, [loggedIn]);
 
     React.useEffect(() => {
       api
@@ -73,7 +73,7 @@ function App() {
         .catch((err) => {
           console.log(err);
         });
-    }, []);
+    }, [loggedIn]);
 
     function handleCardDelete(card) {
       api
@@ -90,7 +90,7 @@ function App() {
     }
 
     function handleCardLike(card) {
-      const isLiked = card.likes.some((i) => i._id === currentUser._id);
+      const isLiked = card.likes.some((id) => id === currentUser._id);
       if (!isLiked) {
         api
           .getLike(card._id)
@@ -191,13 +191,13 @@ function App() {
           .then((data) => {
             if (data) {
               setLoggedIn(true);
-              setHeaderEmail(data.data.email);
+              setHeaderEmail(data.email);
               navigate("/", { replace: true });
             }
           })
           .catch((err) => console.log(err));
       }
-    }, []);
+    }, [loggedIn]);
    
     function handleSingOut() {
       localStorage.removeItem("jwt");
