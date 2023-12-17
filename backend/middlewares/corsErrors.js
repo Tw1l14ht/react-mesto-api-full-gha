@@ -1,5 +1,5 @@
 const allowedCors = [
-  'twilight1.nomoredomainsmonster.ru',
+  'https://twilight1.nomoredomainsmonster.ru',
   'twilight1.nomoredomainsmonster.ru',
 ];
 
