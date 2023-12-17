@@ -11,11 +11,11 @@ const { PORT = 3000 } = process.env;
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
+app.use(corsErrors);
 app.use(requestLogger);
 app.use(router);
 app.use(errorLogger);
-app.use(cors());
-app.use(corsErrors);
 app.use(errors());
 
 app.use((err, req, res, next) => {
