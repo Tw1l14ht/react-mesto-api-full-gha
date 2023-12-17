@@ -71,9 +71,8 @@ class Api {
   }
 
 export const api = new Api({
-  url: "https://mesto.nomoreparties.co/v1/cohort-74",
+  url: "https://api.twilight1.nomoredomainsmonster.ru",
   headers: {
       "content-type": "application/json",
-      authorization: 'aa78bdd8-1a6d-4453-b15d-280d5ef8f7b0'
   }
 });

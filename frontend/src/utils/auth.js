@@ -1,5 +1,5 @@
 
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://api.twilight1.nomoredomainsmonster.ru';
 
 function checkError(response){
   if (response.ok) {
