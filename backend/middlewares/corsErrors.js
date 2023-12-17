@@ -1,6 +1,6 @@
 const allowedCors = [
   'https://twilight1.nomoredomainsmonster.ru',
-  'https://twilight1.nomoredomainsmonster.ru/signin',
+  'https://api.twilight1.nomoredomainsmonster.ru',
 ];
 
 module.exports = (req, res, next) => {
@@ -9,10 +9,8 @@ module.exports = (req, res, next) => {
   const requestHeaders = req.headers['access-control-request-headers'];
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
-  if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', true);
-  }
 
   if (method === 'OPTIONS') {
     res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
